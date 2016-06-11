@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="miniquiz">
 <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mini Quiz</title>
@@ -11,8 +12,23 @@
     <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 
     <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+
+    <!-- AngularJS controller -->
+    <script src="app/list/list.controller.js"></script>
+
+    <!-- AngularJS services -->
+    <script src="app/services/product.service.js"></script>
+    <script src="app/services/product.data.service.js"></script>
 </head>
 <body>
-    <h1>Mini Quiz</h1>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand" ui-sref="list">Mini Quiz</div>
+            </div>
+        </div>
+    </nav>
+    <ui-view></ui-view>
 </body>
 </html>
