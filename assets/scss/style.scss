@@ -1,0 +1,13 @@
+div.productList {
+    div.productBox {
+        border: 1px solid grey;
+        margin-bottom: 1em;
+        div {
+            min-height: 15em;
+        }
+    }
+    img {
+        max-width: 100%;
+        max-height: 15em;
+    }
+}

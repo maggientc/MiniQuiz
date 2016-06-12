@@ -9,6 +9,7 @@
     function ListController($log, ProductService) {
         var list = this;
 
+        list.imgUrl = ProductService.imgUrl;
         list.data = ProductService.getAll();
     }
 })();
