@@ -30,11 +30,10 @@
         }
 
         function getByCategory(category) {
-            if (category === 'all') {
+            if (category.indexOf('all') != -1) {
                 return getAll();
-
             }
-            return data.filter(product => product.category == category);
+            return data.filter(product => category.indexOf(product.category) != -1);
         }
     }
 })();

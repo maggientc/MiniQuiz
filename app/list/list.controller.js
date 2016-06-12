@@ -16,13 +16,13 @@
 
         list.category = ProductService.getAllCategory();
         list.category.unshift('all');
-        list.selectedCategory = 'all';
-        list.selectCategory = selectCategory;
+        list.selectedCategory = ['all'];
+        list.categoryUpdate = categoryUpdate;
 
         init();
 
         function init(){
-            selectCategory();
+            categoryUpdate();
         }
 
         function displayNumber(){
@@ -30,7 +30,7 @@
             list.showNumberLabel = list.showNumber? 'Hide Nubmer':'Show Nubmer';
         }
 
-        function selectCategory(){
+        function categoryUpdate(){
             list.data = ProductService.getByCategory(list.selectedCategory);
         }
     }
