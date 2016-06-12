@@ -1,9 +1,14 @@
 div.productList {
     div.productBox {
-        border: 1px solid grey;
+        border-right: 1px dotted grey;
         margin-bottom: 1em;
+        padding: 1em;
         div {
             min-height: 15em;
+        }
+
+        &:nth-child(4n) {
+            border-right: none;
         }
     }
     img {
