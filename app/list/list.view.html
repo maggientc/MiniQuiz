@@ -3,10 +3,12 @@
         <button class="btn btn-default" ng-click="list.displayNumber()">{{list.showNumberLabel}}</button>
     </div>
     <div class="row">
+        <select class="form-control" ng-options="cat for cat in list.category" ng-model="list.selectedCategory" ng-change="list.selectCategory()"></select>
+    </div>
+    <div class="row">
         <div class="col-md-3 productBox" ng-repeat="item in list.data">
-            <div><img class="center-block" ng-src="{{list.imgUrl + item.image}}" ></div>
-            <h4 ng-show="list.showNumber">{{item.value}}</h4>
-            {{item.name}}
+            <div><img class="center-block" ng-src="{{list.imgUrl + item.image}}"></div>
+            <h4 ng-show="list.showNumber">{{item.value}}</h4> {{item.name}}
         </div>
     </div>
 </div>
