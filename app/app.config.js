@@ -16,5 +16,11 @@ angular
             templateUrl: 'app/list/list.view.html',
             controller: 'ListController as list'
         });
+
+        $stateProvider.state('quiz', {
+            url: '/quiz',
+            templateUrl: 'app/quiz/quiz.view.html',
+            controller: 'QuizController as quiz'
+        });
     }
 })();

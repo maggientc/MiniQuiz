@@ -12,7 +12,8 @@
             imgUrl: 'assets/img/',
             getAll: getAll,
             getAllCategory: getAllCategory,
-            getByCategory: getByCategory
+            getByCategory: getByCategory,
+            getRandomQuizList: getRandomQuizList
         };
 
         function getAll() {
@@ -22,7 +23,7 @@
         function getAllCategory() {
             var categoryArray = [];
             data.forEach(function(item) {
-                if (categoryArray.indexOf(item.category) == -1) {
+                if (!_.contains(categoryArray, item.category)) {
                     categoryArray.push(item.category);
                 }
             });
@@ -30,10 +31,14 @@
         }
 
         function getByCategory(category) {
-            if (category.indexOf('all') != -1) {
+            if (_.contains(category, 'all')) {
                 return getAll();
             }
-            return data.filter(product => category.indexOf(product.category) != -1);
+            return data.filter(product => _.contains(category, product.category));
+        }
+
+        function getRandomQuizList(n) {
+            return _.sample(data, n);
         }
     }
 })();

@@ -19,5 +19,18 @@ div.productList {
     img {
         max-width: 100%;
         max-height: 15em;
+        margin-bottom: 1em;
+    }
+}
+
+div.quizList {
+    @extend div.productList;
+    div.productBox {
+        div.answerContainer {
+            min-height: 1em;
+            input {
+                margin-top: 1em;
+            }
+        }
     }
 }

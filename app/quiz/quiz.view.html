@@ -1,0 +1,17 @@
+<div class="container quizList">
+    <div class="row">
+        <div class="col-md-3 productBox" ng-repeat="item in quiz.list">
+            <div><img class="center-block" ng-src="{{quiz.imgUrl + item.image}}"></div>
+            
+            <div class="answerContainer col-md-offset-4 form-group has-feedback" ng-class="{'has-success': item.answer.status == 'correct', 'has-error': item.answer.status == 'wrong'}">
+                <input type="number" class="form-control" placeholder="{{item.name}}" ng-model="item.answer.value">
+                <span ng-show="item.answer.status == 'correct'" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span ng-show="item.answer.status == 'wrong'" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn btn-default pull-right btn-lg btn-block" ng-click="quiz.checkAnswer()">Submit Answer</button>
+        <button class="btn btn-default pull-right btn-lg btn-block" ng-click="quiz.init()">New Test</button>
+    </div>
+</div>
