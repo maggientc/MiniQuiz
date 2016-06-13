@@ -1,0 +1,20 @@
+var express = require('express');
+var path = require('path');
+
+var app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
+
+/*app.all('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'public/views/index.html'));
+});*/
+
+app.use(function(req, res) {
+    // Use res.sendfile, as it streams instead of reading the file into memory.
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(3000, function() {
+    console.log('ready on port 3000');
+});

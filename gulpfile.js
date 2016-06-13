@@ -20,11 +20,11 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('connect', function() {
+/*gulp.task('connect', function() {
     connect.server({
         port: 4000
     })
-});
+});*/
 
 // Watch Task - look for changes
 // Watches JS
@@ -36,4 +36,4 @@ gulp.task('watch', function() {
 // can be a callback function when gulp run
 // gulp.task('default', function() {}); 
 
-gulp.task('default', ['lint', 'connect', 'styles', 'watch']);
+gulp.task('default', ['lint', /*'connect',*/ 'styles', 'watch']);
