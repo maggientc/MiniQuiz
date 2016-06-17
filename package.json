@@ -20,12 +20,18 @@
   "dependencies": {
     "angular": "^1.5.6",
     "angular-ui-router": "^0.3.1",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "lodash": "^4.13.1",
+    "lodash.sample": "^4.1.1",
+    "lodash.samplesize": "^4.0.4",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^4.0.0",
     "gulp-jshint": "^2.0.1",
+    "gulp-nodemon": "^2.1.0",
     "gulp-sass": "^2.3.1",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0"

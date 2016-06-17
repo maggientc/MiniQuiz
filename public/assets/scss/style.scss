@@ -1,0 +1,36 @@
+div.productList {
+    div.productBox {
+        border-right: 1px dotted grey;
+        margin-bottom: 1em;
+        padding: 1em;
+        div {
+            min-height: 15em;
+        }
+        &:nth-child(4n) {
+            border-right: none;
+        }
+    }
+    div.row {
+        margin-bottom: 2em;
+    }
+    select {
+        height: 10em;
+    }
+    img {
+        max-width: 100%;
+        max-height: 15em;
+        margin-bottom: 1em;
+    }
+}
+
+div.quizList {
+    @extend div.productList;
+    div.productBox {
+        div.answerContainer {
+            min-height: 1em;
+            input {
+                margin-top: 1em;
+            }
+        }
+    }
+}
