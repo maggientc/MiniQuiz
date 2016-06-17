@@ -15,7 +15,8 @@
 
         init();
 
-        function init(){
+        function init() {
+            quiz.mark = 0;
             quiz.list = ProductService.getRandomQuizList(8);
             quiz.list.forEach(addAnswerStatus);
         }
@@ -27,9 +28,11 @@
         }
 
         function checkAnswer() {
-            quiz.list.forEach(function(element){
-                if(element.answer.value && element.answer.value == element.value){
+            quiz.mark = 0;
+            quiz.list.forEach(function(element) {
+                if (element.answer.value && element.answer.value == element.value) {
                     element.answer.status = 'correct';
+                    quiz.mark += 1;
                 } else {
                     element.answer.status = 'wrong';
                 }

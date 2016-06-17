@@ -624,13 +624,13 @@
                 category: 'apple'
             },
             {
-                name: '紐西蘭蘋果',
+                name: '紐西蘭蘋果(gala apple)',
                 value: 346,
                 image: 'galaapple.png',
                 category: 'apple'
             },
             {
-                name: '新紐西蘭蘋果',
+                name: '新紐西蘭蘋果(braeburn apple)',
                 value: 347,
                 image: 'braeburnapple.jpg',
                 category: 'apple'
@@ -1039,7 +1039,7 @@
             },
             {
                 name: '啤梨',
-                value: 305,
+                value: 306,
                 image: 'danjoupear.jpg',
                 category: 'pear'
             },
